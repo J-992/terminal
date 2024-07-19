@@ -14,14 +14,40 @@ const Welcome: React.FC = () => {
     <HeroContainer data-testid="welcome">
       <div className="info-section">
         <PreName>
-          {`ASCIIII GOES EEEEER`}
+          {`
+.----------------------------------------------------.
+|                                                    |
+|   ▄▄▌ ▐ ▄▌▄▄▄ .▄▄▌   ▄▄·       • ▌ ▄ ·. ▄▄▄ .▄▄    |
+|   ██· █▌▐█▀▄.▀·██•  ▐█ ▌▪▪     ·██ ▐███▪▀▄.▀·██▌   |
+|   ██▪▐█▐▐▌▐▀▀▪▄██▪  ██ ▄▄ ▄█▀▄ ▐█ ▌▐▌▐█·▐▀▀▪▄▐█·   |
+|   ▐█▌██▐█▌▐█▄▄▌▐█▌▐▌▐███▌▐█▌.▐▌██ ██▌▐█▌▐█▄▄▌.▀    |
+|    ▀▀▀▀ ▀▪ ▀▀▀ .▀▀▀ ·▀▀▀  ▀█▄▀▪▀▀  █▪▀▀▀ ▀▀▀  ▀    |
+|                                                    |
+'----------------------------------------------------'
+
+          `}
         </PreName>
         <PreWrapper>
           <PreNameMobile>
-            {`MORE ASCIIIIII BUT MOBILE `}
+            {`
+
+.------------------------------------.
+|                                    |
+|   ░█░█░█▀▀░█░░░█▀▀░█▀█░█▄█░█▀▀░█   |
+|   ░█▄█░█▀▀░█░░░█░░░█░█░█░█░█▀▀░▀   |
+|   ░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀   |
+|                                    |
+'------------------------------------'
+            
+              
+            `}
           </PreNameMobile>
         </PreWrapper>
-        <div>Welcome to my terminal portfolio. (Version 1.3.1)</div>
+        <div>Welcome to my portfolio but in a terminal (Version 1.0).</div>
+        <div>
+          I was bored of making a website with a nice looking UI (I've gone through 5 or 6 different designs and had a creators block), 
+          so I made this instead. Hope you enjoy!
+        </div>
         <Seperator>----</Seperator>
         <div>
           This project's source code can be found in this project's{" "}
@@ -37,7 +63,21 @@ const Welcome: React.FC = () => {
       </div>
       <div className="illu-section">
         <PreImg>
-          {`ASCII OF BUTTERFLYYYYY `}
+          {`                                                       
+  +**=-.                      
+  #%#*+=-.                    
+  .##=---==                   
+  .%#--===**                  
+  .%#=--=*#%=                 
+   .=+====+#%:=  :-====-=#++. 
+  :#=--=****%@%##****=--=#%#: 
+  +%=---=+**%%#***+#*=+*%=.   
+  =%*=--=*+=#+**++*++*#+.     
+  .#%%##%#-.-*+==-=++         
+   :+###=.  #%*+**#+          
+           :%%@%*=            
+            :..             
+          `}
         </PreImg>
       </div>
     </HeroContainer>

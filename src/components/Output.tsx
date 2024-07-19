@@ -10,25 +10,32 @@ import Welcome from "./commands/Welcome";
 import History from "./commands/History";
 import Projects from "./commands/Projects";
 import Socials from "./commands/Socials";
-import Themes from "./commands/Themes";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
+import React, { useState, useEffect } from "react";
+import UserInfo from "./commands/UserInfo";
+import Themes from "./commands/Themes";
+
 
 type Props = {
   index: number;
   cmd: string;
 };
 
+
+
 const Output: React.FC<Props> = ({ index, cmd }) => {
   const { arg } = useContext(termContext);
-
   const specialCmds = ["projects", "socials", "themes", "echo"];
+
 
   // return 'Usage: <cmd>' if command arg is not valid
   // eg: about tt
   if (!specialCmds.includes(cmd) && arg.length > 0)
     return <UsageDiv data-testid="usage-output">Usage: {cmd}</UsageDiv>;
+
+  
 
   return (
     <OutputContainer data-testid={index === 0 ? "latest-output" : null}>
@@ -45,9 +52,9 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           projects: <Projects />,
           pwd: <GeneralOutput>/home/here</GeneralOutput>,
           socials: <Socials />,
-          themes: <Themes />,
+          themes: <Themes/>,
           welcome: <Welcome />,
-          whoami: <GeneralOutput>visitor</GeneralOutput>, //PUT IN IP ADDRESS
+          whoami: <UserInfo/>, //PUT IN IP ADDRESS
         }[cmd]
       }
     </OutputContainer>
