@@ -5,7 +5,7 @@ const TermInfo = () => {
 
   return (
     <Wrapper>
-      <User>user</User>@<WebsiteName>terminal.dev</WebsiteName>:~$
+      <User>notadmin</User>@<WebsiteName>j-992.github.io/terminal</WebsiteName>:~$
     </Wrapper>
   );
 };
