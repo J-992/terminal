@@ -329,7 +329,7 @@ function print() { __p += __j.call(arguments, '') }
   color: ${({theme:e})=>{var t;return(t=e.colors)==null?void 0:t.primary}};
 `,oT=fe.span`
   color: ${({theme:e})=>{var t;return(t=e.colors)==null?void 0:t.secondary}};
-`,fm=()=>L.jsxs(rT,{children:[L.jsx(oT,{children:"user"}),"@",L.jsx(iT,{children:"terminal.dev"}),":~$"]}),lT=fe.div`
+`,fm=()=>L.jsxs(rT,{children:[L.jsx(oT,{children:"notadmin"}),"@",L.jsx(iT,{children:"j-992.github.io/terminal"}),":~$"]}),lT=fe.div`
   padding: 1.25rem;
   padding-top: 0.75rem;
 
