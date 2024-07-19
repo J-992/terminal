@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
-import { ProjectsIntro } from "../styles/Projects.styled";
-import { Cmd, CmdDesc, CmdList, HelpWrapper } from "../styles/Help.styled";
+import { Cmd, CmdDesc, CmdList, HelpWrapper,ProjectsIntro } from "../styles/global.styles";
 import {
   checkRedirect,
   generateTabs,

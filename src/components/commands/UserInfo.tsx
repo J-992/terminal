@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { UserWrapper, HighlightSpan, HighlightAlt } from "../styles/UserInfo.styled";
+import { UserWrapper, HighlightSpan, HighlightAlt } from "../styles/global.styles";
 
 const UserInfo: React.FC = () => {
     const [ipAddress, setIpAddress] = useState("loading...");

@@ -10,7 +10,7 @@ import Welcome from "./commands/Welcome";
 import History from "./commands/History";
 import Projects from "./commands/Projects";
 import Socials from "./commands/Socials";
-import { OutputContainer, UsageDiv } from "./styles/Output.styled";
+import { OutputContainer, UsageDiv } from "./styles/global.styles";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
 import React, { useState, useEffect } from "react";
@@ -27,7 +27,7 @@ type Props = {
 
 const Output: React.FC<Props> = ({ index, cmd }) => {
   const { arg } = useContext(termContext);
-  const specialCmds = ["projects", "socials", "themes", "echo"];
+  const specialCmds = ["projects", "socials", "theme", "echo"];
 
 
   // return 'Usage: <cmd>' if command arg is not valid

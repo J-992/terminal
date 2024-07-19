@@ -1,4 +1,4 @@
-import { UsageDiv } from "./styles/Output.styled";
+import { UsageDiv } from "./styles/global.styles";
 
 type Props = {
   cmd: "themes" | "projects" | "socials";

@@ -4,7 +4,7 @@ import {
   CmdList,
   HelpWrapper,
   KeyContainer,
-} from "../styles/Help.styled";
+} from "../styles/global.styles";
 import { commands } from "../Terminal";
 import { generateTabs } from "../../utils/funcs";
 

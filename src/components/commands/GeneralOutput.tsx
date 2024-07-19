@@ -1,4 +1,4 @@
-import { Wrapper } from "../styles/Output.styled";
+import { Wrapper } from "../styles/global.styles";
 
 type Props = {
   children: string;

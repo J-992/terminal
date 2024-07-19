@@ -7,7 +7,7 @@ import {
   PreNameMobile,
   PreWrapper,
   Seperator,
-} from "../styles/Welcome.styled";
+} from "../styles/global.styles";
 
 const Welcome: React.FC = () => {
   return (

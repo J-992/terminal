@@ -1,12 +1,12 @@
-import { User, WebsiteName, Wrapper } from "./styles/TerminalInfo.styled";
+import { User, WebsiteName, InfoWrapper } from "./styles/global.styles";
 
 const TermInfo = () => {
   
 
   return (
-    <Wrapper>
+    <InfoWrapper>
       <User>notadmin</User>@<WebsiteName>j-992.github.io/terminal</WebsiteName>:~$
-    </Wrapper>
+    </InfoWrapper>
   );
 };
 

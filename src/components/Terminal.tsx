@@ -16,8 +16,8 @@ import {
   Input,
   MobileBr,
   MobileSpan,
-  Wrapper,
-} from "./styles/Terminal.styled";
+  TermWrapper,
+} from "./styles/global.styles";
 import { argTab } from "../utils/funcs";
 
 type Command = {
@@ -180,7 +180,7 @@ const Terminal = () => {
   }, [inputRef, inputVal, pointer]);
 
   return (
-    <Wrapper data-testid="terminal-wrapper" ref={containerRef}>
+    <TermWrapper data-testid="terminal-wrapper" ref={containerRef}>
       {hints.length > 1 && (
         <div>
           {hints.map(hCmd => (
@@ -240,7 +240,7 @@ const Terminal = () => {
           </div>
         );
       })}
-    </Wrapper>
+    </TermWrapper>
   );
 };
 
