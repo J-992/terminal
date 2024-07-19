@@ -7,7 +7,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/j-992.terminal.io/",
+  base: "/terminal/",
   plugins: [
     react(),
     VitePWA({
