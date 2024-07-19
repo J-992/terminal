@@ -58,31 +58,31 @@ const projects = [
     id: 1,
     title: "PLACEHOLDER1",
     desc: "PLACEHOLDERDESC",
-    url: "https://satnaing.dev/blog/",
+    url: "https://matias.me/nsfw",
   },
   {
     id: 2,
     title: "PLACEHOLDER1",
     desc: "PLACEHOLDERDESC",
-    url: "https://haru-fashion.vercel.app/",
+    url: "https://matias.me/nsfw",
   },
   {
     id: 3,
     title: "PLACEHOLDER1",
     desc: "PLACEHOLDERDESC",
-    url: "https://satnaing.github.io/haru-api/",
+    url: "https://matias.me/nsfw",
   },
   {
     id: 4,
     title: "PLACEHOLDER1",
     desc: "PLACEHOLDERDESC",
-    url: "https://astro-paper.pages.dev/",
+    url: "https://matias.me/nsfw",
   },
   {
     id: 5,
     title: "PLACEHOLDER1",
     desc: "PLACEHOLDERDESC",
-    url: "https://astro-paper.pages.dev/",
+    url: "https://matias.me/nsfw",
   },
 ];
 
