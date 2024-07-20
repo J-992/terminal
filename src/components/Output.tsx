@@ -16,6 +16,7 @@ import { useContext } from "react";
 import React, { useState, useEffect } from "react";
 import UserInfo from "./commands/UserInfo";
 import Themes from "./commands/Themes";
+import Secret from "./commands/Secret";
 
 
 type Props = {
@@ -50,11 +51,13 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           help: <Help />,
           history: <History />,
           projects: <Projects />,
-          pwd: <GeneralOutput>/home/here</GeneralOutput>,
+          pwd: <GeneralOutput>C:/j-992.github.io/terminal</GeneralOutput>,
           socials: <Socials />,
-          themes: <Themes/>,
+          theme: <Themes/>,
           welcome: <Welcome />,
           whoami: <UserInfo/>, //PUT IN IP ADDRESS
+          cd: <GeneralOutput>Potato</GeneralOutput>,
+          secret: <Secret/>,
         }[cmd]
       }
     </OutputContainer>

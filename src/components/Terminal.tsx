@@ -38,9 +38,11 @@ export const commands: Command = [
   { cmd: "projects", desc: "view some of my projects", tab: 5 },
   { cmd: "pwd", desc: "print current working directory", tab: 10 },
   { cmd: "socials", desc: "check out my socials", tab: 6 },
-  { cmd: "themes", desc: "check available themes", tab: 7 },
+  { cmd: "theme", desc: "check available themes", tab: 7 },
   { cmd: "welcome", desc: "display hero section", tab: 6 },
   { cmd: "whoami", desc: "about current user", tab: 7 },
+  { cmd: "cd", desc: "change directory (functionality in progress)", tab: 11 },
+  { cmd: "secret", desc: "secret command", tab: 7 },
 ];
 
 type Term = {

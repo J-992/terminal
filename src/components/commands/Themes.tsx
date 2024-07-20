@@ -30,7 +30,7 @@ const Themes: React.FC = () => {
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
-    isArgInvalid(arg, "set", myThemes) ? <Usage cmd="themes" /> : null;
+    isArgInvalid(arg, "set", myThemes) ? <Usage cmd="theme" /> : null;
 
   return arg.length > 0 || arg.length > 2 ? (
     checkArg()
@@ -41,7 +41,7 @@ const Themes: React.FC = () => {
           <ThemeSpan key={myTheme}>{myTheme}</ThemeSpan>
         ))}
       </ThemesWrapper>
-      <Usage cmd="themes" marginY />
+      <Usage cmd="theme" marginY />
     </Wrapper>
   );
 };
