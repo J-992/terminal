@@ -34,13 +34,13 @@ A terminal style website
 Clone the project
 
 ```bash
-git clone https://github.com/satnaing/terminal-portfolio.git
+git clone https://github.com/J-992/terminal.git
 ```
 
 Go to the project directory
 
 ```bash
-cd terminal-portfolio
+cd terminal
 ```
 
 Remove remote origin
