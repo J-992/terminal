@@ -85,4 +85,38 @@ const projects = [
   },
 ];
 
+const projects2 = [
+  {
+    id: 6,
+    title: "EMG Prorrrsthetic Arm",
+    desc: "IN PROGRESS - Converts AO read from endusers forearm into signals used to control a prosthetic arm.",
+    url: "https://github.com/J-992/emg-arm",
+  },
+  {
+    id: 7,
+    title: "PLACEHOLDER1",
+    desc: "PLACEHOLDERDESC",
+    url: "https://matias.me/nsfw",
+  },
+  {
+    id: 8,
+    title: "Drawing Robot",
+    desc: "This is what it sounds like. It's a drawing robot.",
+    url: "https://github.com/J-992/drawing-robot",
+  },
+  {
+    id: 9,
+    title: "PWR Isotope Production System (IPS) design & feasibility",
+    desc: "A feasibility study and R&D done at Framatome to design an IPS for Pressurized Water Reactors. Please reach out for more information.",
+    url: "",
+  },
+  {
+    id: 10,
+    title: "GlobalReach",
+    desc: "IN PROGRESS - AI based commercial detection using a Raspberry PI 5. Please reach out for more information as this project is still private.",
+    url: "https://matias.me/nsfw",
+  },
+];
+
+
 export default Projects;
