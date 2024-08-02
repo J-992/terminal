@@ -39,8 +39,7 @@ const Projects: React.FC = () => {
   ) : (
     <div data-testid="projects">
       <ProjectsIntro>
-        Here ya go <br />
-        Check them out!
+        Check them out! Private codebases will not be accessible.
       </ProjectsIntro>
       {projects.map(({ id, title, desc }) => (
         <ProjectContainer key={id}>
@@ -56,9 +55,9 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "PLACEHOLDER1",
-    desc: "PLACEHOLDERDESC",
-    url: "https://matias.me/nsfw",
+    title: "EMG Prosthetic Arm",
+    desc: "IN PROGRESS - Converts AO read from endusers forearm into signals used to control a prosthetic arm.",
+    url: "https://github.com/J-992/emg-arm",
   },
   {
     id: 2,
@@ -68,20 +67,20 @@ const projects = [
   },
   {
     id: 3,
-    title: "PLACEHOLDER1",
-    desc: "PLACEHOLDERDESC",
-    url: "https://matias.me/nsfw",
+    title: "Drawing Robot",
+    desc: "This is what it sounds like. It's a drawing robot.",
+    url: "https://github.com/J-992/drawing-robot",
   },
   {
     id: 4,
-    title: "PLACEHOLDER1",
-    desc: "PLACEHOLDERDESC",
-    url: "https://matias.me/nsfw",
+    title: "PWR Isotope Production System (IPS) design & feasibility",
+    desc: "A feasibility study and R&D done at Framatome to design an IPS for Pressurized Water Reactors. Please reach out for more information.",
+    url: "",
   },
   {
     id: 5,
-    title: "PLACEHOLDER1",
-    desc: "PLACEHOLDERDESC",
+    title: "GlobalReach",
+    desc: "IN PROGRESS - AI based commercial detection using a Raspberry PI 5. Please reach out for more information as this project is still private.",
     url: "https://matias.me/nsfw",
   },
 ];

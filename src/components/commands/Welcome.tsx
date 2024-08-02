@@ -45,7 +45,7 @@ const Welcome: React.FC = () => {
         </PreWrapper>
         <div>Welcome to my portfolio but in a terminal (Version 1.0).</div>
         <div>
-          I was bored of making a website with a nice looking UI (I've gone through 5 or 6 different designs and had a creators block), 
+          I was bored of making a website with a nice looking UI, 
           so I made this instead. Hope you enjoy!
         </div>
         <Seperator>----</Seperator>

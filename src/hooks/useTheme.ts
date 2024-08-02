@@ -14,7 +14,7 @@ export const useTheme = () => {
 
   useEffect(() => {
     const localThemeName = getFromLS("tsn-theme");
-    localThemeName ? setTheme(themes[localThemeName]) : setTheme(themes.dark);
+    localThemeName ? setTheme(themes[localThemeName]) : setTheme(themes.espresso);
     setThemeLoaded(true);
   }, []);
 

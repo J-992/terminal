@@ -1,23 +1,8 @@
-import React, {
-  createContext,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { createContext, useCallback, useEffect, useRef, useState } from "react";
 import _ from "lodash";
 import Output from "./Output";
 import TermInfo from "./TermInfo";
-import {
-  CmdNotFound,
-  Empty,
-  Form,
-  Hints,
-  Input,
-  MobileBr,
-  MobileSpan,
-  TermWrapper,
-} from "./styles/global.styles";
+import { CmdNotFound, Empty, Form, Hints, Input, MobileBr, MobileSpan, TermWrapper } from "./styles/global.styles";
 import { argTab } from "../utils/funcs";
 
 type Command = {
@@ -69,6 +54,8 @@ const Terminal = () => {
   const [rerender, setRerender] = useState(false);
   const [hints, setHints] = useState<string[]>([]);
   const [pointer, setPointer] = useState(-1);
+  const [isSecretActive, setIsSecretActive] = useState(false);
+  const [passwordMessage, setPasswordMessage] = useState('');
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,11 +67,31 @@ const Terminal = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setCmdHistory([inputVal, ...cmdHistory]);
-    setInputVal("");
-    setRerender(true);
-    setHints([]);
-    setPointer(-1);
+
+    if (isSecretActive) {
+      if (inputVal === "1234") {
+        setPasswordMessage('Password correct. Access granted!');
+        window.location.href = 'https://www.example.com'; // Replace with your desired URL
+      } else {
+        setPasswordMessage('Incorrect password. Try again.');
+      }
+      setCmdHistory([inputVal, ...cmdHistory]);
+      setInputVal("");
+      setRerender(true);
+      setHints([]);
+      setPointer(-1);
+      setIsSecretActive(false); // Reset secret state after handling password
+    } else if (inputVal === "secret") {
+      setIsSecretActive(true);
+      setCmdHistory([inputVal, ...cmdHistory]);
+      setInputVal("");
+    } else {
+      setCmdHistory([inputVal, ...cmdHistory]);
+      setInputVal("");
+      setRerender(true);
+      setHints([]);
+      setPointer(-1);
+    }
   };
 
   const clearHistory = () => {
@@ -153,7 +160,7 @@ const Terminal = () => {
       if (pointer + 1 === cmdHistory.length) return;
 
       setInputVal(cmdHistory[pointer + 1]);
-      setPointer(prevState => prevState + 1);
+      setPointer((prevState) => prevState + 1);
       inputRef?.current?.blur();
     }
 
@@ -168,7 +175,7 @@ const Terminal = () => {
       }
 
       setInputVal(cmdHistory[pointer - 1]);
-      setPointer(prevState => prevState - 1);
+      setPointer((prevState) => prevState - 1);
       inputRef?.current?.blur();
     }
   };
@@ -185,14 +192,18 @@ const Terminal = () => {
     <TermWrapper data-testid="terminal-wrapper" ref={containerRef}>
       {hints.length > 1 && (
         <div>
-          {hints.map(hCmd => (
+          {hints.map((hCmd) => (
             <Hints key={hCmd}>{hCmd}</Hints>
           ))}
         </div>
       )}
       <Form onSubmit={handleSubmit}>
         <label htmlFor="terminal-input">
-          <TermInfo /> <MobileBr />
+          {!isSecretActive && (
+            <>
+              <TermInfo /> <MobileBr />
+            </>
+          )}
           <MobileSpan>&#62;</MobileSpan>
         </label>
         <Input
@@ -209,6 +220,12 @@ const Terminal = () => {
           onChange={handleChange}
         />
       </Form>
+
+      {passwordMessage && (
+        <div>
+          <p>{passwordMessage}</p>
+        </div>
+      )}
 
       {cmdHistory.map((cmdH, index) => {
         const commandArray = _.split(_.trim(cmdH), " ");
