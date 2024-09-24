@@ -4,7 +4,7 @@ import { setToLS, getFromLS } from "../utils/storage";
 import { DefaultTheme } from "styled-components";
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<DefaultTheme>(themes.dark);
+  const [theme, setTheme] = useState<DefaultTheme>(themes.espresso);
   const [themeLoaded, setThemeLoaded] = useState(false);
 
   const setMode = (mode: DefaultTheme) => {
