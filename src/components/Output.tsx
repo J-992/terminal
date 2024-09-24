@@ -49,7 +49,6 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           theme: <Themes />,
           welcome: <Welcome />,
           whoami: <UserInfo />,
-          cd: <GeneralOutput>Potato</GeneralOutput>,
           secret: <Secret />,
         }[cmd]
       }
